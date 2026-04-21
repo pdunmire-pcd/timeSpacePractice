@@ -169,13 +169,14 @@ public class Practice {
     int currentCount = 0;
 
     for (int i = 0; i<nums.length; i++){
+      currentCount = 0;
       for (int j = 0; j<nums.length; j++) {
         currentCount++;
-        if (mostCommonCount < currentCount) {
-          mostCommonCount = currentCount;
-          mostCommon = nums[i];
         }
       }
+      if (mostCommonCount < currentCount) {
+          mostCommonCount = currentCount;
+          mostCommon = nums[i];
     }
 
     return mostCommon;
