@@ -122,16 +122,29 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: o(n)
+   * Space Complexity: o(n)
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
   public static int mostCommonTimeEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
-    // in O(n) time. n = nums.length
-    return -1;
+    Map<Integer, Integer> Count = new HashMap<>();
+    int countNums = 0;
+     for(int count : nums){
+      if( !Count.containsKey(count)){
+       Count.put(count, 1);
+      } else{ 
+        Count.put(count,Count.get(count)+1);
+      }
+     } 
+      for( int key : Count.keySet()){
+        if(Count.get(key) > countNums){
+          countNums = key;
+      }
+     }
+    
+    return countNums;
   }
 
   /**
