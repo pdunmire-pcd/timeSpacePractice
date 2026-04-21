@@ -163,8 +163,21 @@ public class Practice {
    * @return the integer that shows up most commonly
    */
   public static int mostCommonSpaceEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
     // in O(1) space.
-    return -1;
+    int mostCommon = 0;
+    int mostCommonCount = 0;
+    int currentCount = 0;
+
+    for (int i = 0; i<nums.length; i++){
+      for (int j = 0; j<nums.length; j++) {
+        currentCount++;
+        if (mostCommonCount < currentCount) {
+          mostCommonCount = currentCount;
+          mostCommon = nums[i];
+        }
+      }
+    }
+
+    return mostCommon;
   }
 }
