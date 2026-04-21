@@ -79,9 +79,9 @@ public class Practice {
     return result;
   }
 
-  // Time Complexity:
-  // Space Complexity:
-  // Remember to define your variables!
+  // Time Complexity: o(r*c) where r = number of rows and c = number of columns
+  // Space Complexity: o(r*C)
+  // Remember to define your variables! rows  * columns
   public static char[][] initCharRect(int rows, int cols) {
     return new char[rows][cols];
   }
